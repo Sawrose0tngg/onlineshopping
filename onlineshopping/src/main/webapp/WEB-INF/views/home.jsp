@@ -1,16 +1,6 @@
 <div class="container">
 	<div class="row">
-		<div class="col-lg-3">
-			<h3 class="my-4 text-center">Category</h3>
-			<div class="list-group">
-				<a href="#" class="list-group-item">Category 1</a> <a href="#"
-					class="list-group-item">Category 2</a> <a href="#"
-					class="list-group-item">Category 3</a>
-			</div>
-
-		</div>
-		<!-- /.col-lg-3 -->
-
+		<%@include file="./shared/sidebar.jsp" %>
 		<div class="col-lg-9">
 
 			<div id="carouselExampleIndicators" class="carousel slide my-4"

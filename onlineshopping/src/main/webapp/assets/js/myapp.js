@@ -15,6 +15,7 @@ $(function() {
 	default:
 		$('#product').addClass('active');
 		$('#product a').addClass('text-danger');
+		$('#a_'+menu).addClass('active');
 		break;
 	}
 });
