@@ -9,29 +9,35 @@ import org.springframework.web.servlet.ModelAndView;
 public class PageController {
 
 	@RequestMapping(value = { "/", "/home", "/index" })
-	public ModelAndView index() {
+	public ModelAndView home() {
 		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("greeting", "Welcome To Spring Web MVC");
+		mv.addObject("title", "Home");
+		mv.addObject("userClickHome", true);
 		return mv;
 	}
 
-	/*@RequestMapping(value = "/test")
-	public ModelAndView test(@RequestParam(value = "greet", required = false) String greet) {
+	@RequestMapping(value = "/about")
+	public ModelAndView about() {
 		ModelAndView mv = new ModelAndView("page");
-		if (greet == null)
-			greet = "Hello";
-		mv.addObject("greeting", "Your Parameter say: " + greet);
-		return mv;
-	}*/
-	
-	@RequestMapping(value = "/test/{greeting}")
-	public ModelAndView test(@PathVariable("greeting") String greet) {
-		ModelAndView mv = new ModelAndView("page");
-		if (greet == null)
-			greet = "Hello";
-		mv.addObject("greeting", "Your Parameter say: " + greet);
+		mv.addObject("title", "About");
+		mv.addObject("userClickAbout", true);
 		return mv;
 	}
-	
-	
+
+	@RequestMapping(value = "/products")
+	public ModelAndView productList() {
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("title", "Products");
+		mv.addObject("userClickProduct", true);
+		return mv;
+	}
+
+	@RequestMapping(value = "/contact")
+	public ModelAndView contact() {
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("title", "Contact");
+		mv.addObject("userClickContact", true);
+		return mv;
+	}
+
 }
