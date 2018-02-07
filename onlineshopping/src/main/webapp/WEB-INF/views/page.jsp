@@ -21,6 +21,7 @@
 
 <script type="text/javascript">
 	window.menu = '${title}';
+	window.contextRoot = '${contextRoot}';
 </script>
 
 <!-- Bootstrap core CSS -->
@@ -28,6 +29,9 @@
 
 <!-- Bootstrap Materail Theme CSS -->
 <link href="${css}/bootstrap-theme.css" rel="stylesheet">
+
+<!-- DataTable -->
+<link href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
 
 <!-- Custom styles for this template -->
 <link href="${css}/myapp.css" rel="stylesheet">
@@ -50,8 +54,13 @@
 			<c:if test="${userClickContact == true}">
 				<%@include file="contact.jsp"%>
 			</c:if>
-			<c:if test="${userClickAllProduct == true or userClickCategoryProduct == true}">
+			<c:if
+				test="${userClickAllProduct == true or userClickCategoryProduct == true}">
 				<%@include file="product.jsp"%>
+			</c:if>
+			<c:if
+				test="${userClickShowProduct == true}">
+				<%@include file="singleProduct.jsp"%>
 			</c:if>
 		</div>
 		<!-- Footer -->
@@ -60,6 +69,10 @@
 		<!-- Bootstrap core JavaScript -->
 		<script src="${js}/jquery.js"></script>
 		<script src="${js}/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript"
+			src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript"
+			src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
 		<script src="${js}/myapp.js"></script>
 	</div>
 </body>
