@@ -12,6 +12,10 @@ $(function() {
 		$('#contact').addClass('active');
 		$('#contact a').addClass('text-danger');
 		break;
+	case 'Manage Products':
+		$('#manageProducts').addClass('active');
+		$('#manageProducts a').addClass('text-danger');
+		break;
 	default:
 		$('#product').addClass('active');
 		$('#product a').addClass('text-danger');
@@ -94,7 +98,13 @@ $(function() {
 					
 				});
 	}
-	
+	//Dismission alert after 3 second
+	var $alert = $('.alert');
+	if($alert.length){
+		setTimeout(function(){
+			$alert.fadeOut('slow');
+		}, 3000);
+	}
 	
 	
 	
