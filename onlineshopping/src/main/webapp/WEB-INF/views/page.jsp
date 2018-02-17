@@ -9,14 +9,16 @@
 
 <c:set var="contextRoot" value="${pageContext.request.contextPath}" />
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html >
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
-<meta name="author" content="">
+<meta name="author" content="Saroj Moktan">
+<meta name="_csrf" content="${_csrf.token}">
+<meta name="_csrf_header" content="${_csrf.headerName}">
 <title>Onlin Shopping - ${title}</title>
 
 <script type="text/javascript">
@@ -25,7 +27,8 @@
 </script>
 
 <!-- Bootstrap core CSS -->
-<link href="${css}/bootstrap.min.css" rel="stylesheet">
+<%-- <link href="${css}/bootstrap.min.css" rel="stylesheet"> --%>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
 <!-- Bootstrap Materail Theme CSS -->
 <link href="${css}/bootstrap-theme.css" rel="stylesheet">
@@ -66,17 +69,23 @@
 				test="${userClickManageProduct == true}">
 				<%@include file="manageProducts.jsp"%>
 			</c:if>
+			<c:if
+				test="${userClickShowCart == true}">
+				<%@include file="cart.jsp"%>
+			</c:if>
 		</div>
 		<!-- Footer -->
 		<%@include file="./shared/footer.jsp"%>
 
 		<!-- Bootstrap core JavaScript -->
 		<script src="${js}/jquery.js"></script>
+		<script src="${js}/jquery.validate.js"></script>
 		<script src="${js}/bootstrap.bundle.min.js"></script>
 		<script type="text/javascript"
 			src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 		<script type="text/javascript"
 			src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+		<script src="${js}/bootbox.min.js"></script>
 		<script src="${js}/myapp.js"></script>
 	</div>
 </body>

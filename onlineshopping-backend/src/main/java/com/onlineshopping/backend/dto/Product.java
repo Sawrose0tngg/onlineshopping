@@ -30,12 +30,11 @@ public class Product {
 	@NotBlank(message = "Please Enter Description ")
 	private String description;
 	@Column(name = "unit_price")
-	@Min(value = 100, message="Minimum price should be greater than 100")
+	@Min(value = 100, message = "Minimum price should be greater than 100")
 	private int unitPrice;
-	@Min(value = 1, message="Mininum quantity is 1")
+	@Min(value = 1, message = "Mininum quantity is 1")
 	private int quantity;
 	@Column(name = "is_active")
-	@JsonIgnore
 	private boolean active;
 	@Column(name = "category_id")
 	@JsonIgnore
@@ -45,11 +44,9 @@ public class Product {
 	private int supplierId;
 	private int purchases;
 	private int views;
-	
+
 	@Transient
 	private MultipartFile file;
-	
-	
 
 	public MultipartFile getFile() {
 		return file;

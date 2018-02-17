@@ -34,30 +34,33 @@
 			</div>
 
 			<div class="row">
-				<table id="listAllProducts"
-					class="table table-striped table-bordered" cellspacing="0"
-					width="100%">
-					<thead>
-						<tr>
-							<th></th>
-							<th>Name</th>
-							<th>Brand</th>
-							<th>Price</th>
-							<th>Qty. Available</th>
-							<th></th>
-						</tr>
-					</thead>
-					<tfoot>
-						<tr>
-							<th></th>
-							<th>Name</th>
-							<th>Brand</th>
-							<th>Price</th>
-							<th>Qty. Available</th>
-							<th></th>
-						</tr>
-					</tfoot>
-				</table>
+				<div class="table-responsive ">
+					<table id="listAllProducts"
+						class="table table-striped table-bordered" cellspacing="0"
+						width="100%">
+						<thead>
+							<tr>
+								<th></th>
+								<th>Name</th>
+								<th>Brand</th>
+								<th>Price</th>
+								<th>Qty. Available</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tfoot>
+							<tr>
+								<th></th>
+								<th>Name</th>
+								<th>Brand</th>
+								<th>Price</th>
+								<th>Qty. Available</th>
+								<th></th>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+
 			</div>
 			<br>
 		</div>

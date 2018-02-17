@@ -34,7 +34,7 @@ public class GlobalDefaultExceptionHandler {
 		mv.addObject("errorTitle", "Please Contact Administrator.");
 		mv.addObject("errorDescription", ex.toString());
 		mv.addObject("title", "Errore");
-		
+		ex.printStackTrace();
 		return mv;
 	}
 	
